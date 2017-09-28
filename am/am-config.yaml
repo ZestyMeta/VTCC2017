@@ -1,0 +1,27 @@
+formatVersion: 1
+formatType: am-configuration
+---
+applications:
+  builtinAppsManifestDir: "/opt/am/apps"
+  database: "/opt/am/db/apps.db"
+
+installationLocations:
+- id: "internal-0"
+  installationPath: "/opt/am/application-installer-apps"
+  documentPath: "/opt/am/docs"
+  mountPoint: "/opt/am/"
+  isDefault: true
+
+dbus:
+  io.qt.ApplicationManager: 
+    register: 'session'
+
+ui:
+  fullscreen: no
+  mainQml: "system-ui/main.qml"
+
+# development setup:
+flags:
+  noSecurity: yes
+  noUiWatchdog: yes
+
